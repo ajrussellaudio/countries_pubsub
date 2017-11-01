@@ -1,12 +1,17 @@
 class CountriesDetailView {
 	constructor(){
-		return this.render();
+		this.element = document.getElementById("countriesDetail");
+
+		document.addEventListener('selectedCountryChanged', this.render.bind(this));
 	}
 
-	render(){
-		const div = document.createElement('div');
-		div.id = 'countriesDetail';
-		return div;
+	render(event){
+		const country = event.detail;
+		this.element.innerHTML = '';
+
+		const heading = document.createElement('h2');
+		heading.innerText = country.name;
+		this.element.appendChild(heading);
 	}
 }
 
