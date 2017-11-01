@@ -1,0 +1,25 @@
+{
+  "name": "countries_pubsub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnmcc/countries_pubsub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnmcc/countries_pubsub/issues"
+  },
+  "homepage": "https://github.com/johnmcc/countries_pubsub#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "webpack": "^3.8.1"
+  }
+}
