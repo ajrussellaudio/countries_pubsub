@@ -1,9 +1,7 @@
-import Countries from './models/countries.js';
+import Countries from './models/countries';
+import AppView from './views/AppView';
 
 window.addEventListener("load", function(){
-	var countriesModel = new Countries();
-
-	window.addEventListener("countriesDataReceived", function(event){
-		console.log(event);
-	});
+	new Countries();
+	new AppView();
 });

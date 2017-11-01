@@ -19,7 +19,7 @@ class Countries {
 		const event = new CustomEvent("countriesDataReceived", {
 			detail: this.countries
 		});
-		dispatchEvent(event);
+		window.dispatchEvent(event);
 	}
 }
 export default Countries;
