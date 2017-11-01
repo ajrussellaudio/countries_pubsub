@@ -1,7 +1,9 @@
 class CountriesDetailView {
 	constructor(){
+		// grab a reference to the element
 		this.element = document.getElementById("countriesDetail");
 
+		// listen out for the selected country information
 		document.addEventListener('/countries/selected', this.render.bind(this));
 	}
 

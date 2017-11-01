@@ -1,4 +1,4 @@
-class Countries {
+class CountriesModel {
 	constructor(){
 		// Instance variables to hold the API URL...
 		this.url = "https://restcountries.eu/rest/v2/all";
@@ -41,4 +41,4 @@ class Countries {
 	}
 }
 
-export default Countries;
+export default CountriesModel;
