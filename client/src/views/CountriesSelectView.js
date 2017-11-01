@@ -3,7 +3,7 @@ class CountriesSelectView {
 		this.element = document.getElementById("countriesSelect");
 		this.element.addEventListener("change", this.handleChange.bind(this));
 
-		document.addEventListener("countriesDataReceived", this.render.bind(this));
+		document.addEventListener("/countries/all", this.render.bind(this));
 	}
 
 	render(event){

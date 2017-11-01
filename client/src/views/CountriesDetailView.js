@@ -2,7 +2,7 @@ class CountriesDetailView {
 	constructor(){
 		this.element = document.getElementById("countriesDetail");
 
-		document.addEventListener('selectedCountryChanged', this.render.bind(this));
+		document.addEventListener('/countries/selected', this.render.bind(this));
 	}
 
 	render(event){

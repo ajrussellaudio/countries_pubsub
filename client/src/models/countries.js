@@ -25,7 +25,7 @@ class Countries {
 
 	dispatchAllCountries(response){
 		// create & dispatch a new custom event, containing all country info
-		const event = new CustomEvent("countriesDataReceived", {
+		const event = new CustomEvent("/countries/all", {
 			detail: this.countries
 		});
 		document.dispatchEvent(event);
@@ -34,7 +34,7 @@ class Countries {
 	dispatchSelectedCountry(event){
 		// create & dispatch a new custom event, containing the selected country
 		const index = event.detail;
-		const newEvent = new CustomEvent("selectedCountryChanged", {
+		const newEvent = new CustomEvent("/countries/selected", {
 			detail: this.countries[index]
 		});
 		document.dispatchEvent(newEvent);
