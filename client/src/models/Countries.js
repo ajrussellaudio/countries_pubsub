@@ -1,21 +1,18 @@
-class CountriesModel {
-	constructor(){
-		// Instance variables to hold the API URL...
-		this.url = "https://restcountries.eu/rest/v2/all";
-
+class Countries {
+	constructor(url){
 		// ...and the array of countries that should come back...
 		this.countries = [];
 
 		// Fetch the countries data from the API
-		this.fetchData();
+		this.fetchData(url);
 
 		// Listen for the select list change event,
 		document.addEventListener("countriesSelectChanged", this.dispatchSelectedCountry.bind(this));
 	}
 
-	fetchData(){
+	fetchData(url){
 		const xhr = new XMLHttpRequest();
-		xhr.open("GET", this.url);
+		xhr.open("GET", url);
 		xhr.addEventListener("load", () => {
 			this.countries = JSON.parse(xhr.responseText);
 			this.dispatchAllCountries();
@@ -41,4 +38,4 @@ class CountriesModel {
 	}
 }
 
-export default CountriesModel;
+export default Countries;

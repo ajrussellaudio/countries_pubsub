@@ -1,4 +1,4 @@
-import CountriesModel from './models/CountriesModel';
+import Countries from './models/CountriesModel';
 import AppView from './views/AppView';
 
 window.addEventListener("load", function(){
@@ -6,5 +6,5 @@ window.addEventListener("load", function(){
 	new AppView();
 
 	// Load the model
-	new CountriesModel();
+	new Countries("https://restcountries.eu/rest/v2/all");
 });
